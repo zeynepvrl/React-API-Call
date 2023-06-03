@@ -7,7 +7,7 @@ function SearchHeader({search}) {
     } 
     const handleFormSubmit =(event)=>{
         event.preventDefault();
-        search(valueInput);
+        search(valueInput);                     //burdaki valueInput App.js de term parametresine karşılık geliyor
     } 
     return (
      <div className="searchDiv">
