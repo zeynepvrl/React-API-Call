@@ -7,8 +7,9 @@ function SearchHeader({search}) {
     } 
     const handleFormSubmit =(event)=>{
         event.preventDefault();
-        search(valueInput);                     //burdaki valueInput App.js de term parametresine karşılık geliyor
-    } 
+        search(valueInput);                     //burdaki valueInput App.js de term parametresine karşılık geliyor   handleFormSubmit fonksiyonu, form gönderildiğinde 
+                                                //çağrılacak olan olay dinleyicisidir. Bu fonksiyon, varsayılan form davranışını engeller (sayfanın yeniden yüklenmesini önler) 
+    }                                           //ve search prop'u olarak geçilen fonksiyonu çağırır. Bu fonksiyon, valueInput değerini argüman olarak search fonksiyonuna ileterek arama işlemini gerçekleştirmeyi sağlar.
     return (
      <div className="searchDiv">
         <form onSubmit={handleFormSubmit}>            
